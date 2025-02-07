@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1e1e2f;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* Background Animation - Moving Circles */
+/* Background Animation - Moving Circles */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6); /* White, semi-transparent */
+    opacity: 0.8;
+    animation: moveCircle 15s linear infinite;
+}
+
+/* Assign different sizes, positions, and speeds */
+.circle:nth-child(1) { width: 15px; height: 15px; left: 5%; animation-duration: 8s; }
+.circle:nth-child(2) { width: 20px; height: 20px; left: -15%; animation-duration: 10s; }
+.circle:nth-child(3) { width: 25px; height: 25px; left: 30%; animation-duration: 9s; }
+.circle:nth-child(4) { width: 12px; height: 12px; left: 50%; animation-duration: 11s; }
+.circle:nth-child(5) { width: 18px; height: 18px; left: 65%; animation-duration: 7s; }
+.circle:nth-child(6) { width: 15px; height: 15px; left: -80%; animation-duration: 10s; }
+.circle:nth-child(7) { width: 20px; height: 20px; left: 90%; animation-duration: 12s; }
+.circle:nth-child(8) { width: 25px; height: 25px; left: -40%; animation-duration: 9s; }
+.circle:nth-child(9) { width: 15px; height: 15px; left: -70%; animation-duration: 13s; }
+.circle:nth-child(10) { width: 30px; height: 30px; left: -85%; animation-duration: 15s; }
+
+@keyframes moveCircle {
+    0% { 
+        top: -5%;
+        transform: translate(0, 0) scale(1);
+        opacity: 0.8;
+    }
+    100% { 
+        top: 100%;
+        left: calc(100% + 20px); /* Moves diagonally to the bottom right */
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Form Styling */
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    text-align: center;
+    width: 100%;
+    color: #00d4ff;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-group {
+    width: 48%;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #2c2c3e;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #00d4ff;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #005f73;
+    color: white;
+}
+
+/* Prediction Result */
+#predictionResult {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #00ff99;
+}
