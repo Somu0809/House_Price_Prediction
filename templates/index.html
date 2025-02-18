@@ -7,21 +7,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="animated-bg">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
+    <div class="background">
+        <div class="bubbles">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+        </div>
     </div>
-    
+
     <div class="container">
-        <h2>House Price Prediction 🏡</h2>
+        <h2 class="title">🏡 House Price Prediction</h2>
         <form id="predictionForm">
             <div class="form-group">
                 <label>Area:</label>
@@ -83,10 +77,11 @@
                 </select>
             </div>
 
-            <button type="submit">Predict Price</button>
+            <button type="submit" class="btn">Predict Price</button>
         </form>
         <div id="predictionResult"></div>
     </div>
+
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
