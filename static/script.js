@@ -18,6 +18,7 @@ document.getElementById('predictionForm').addEventListener('submit', async funct
 
     if (result.predicted_price) {
         resultDiv.innerHTML = `<strong>Predicted Price: ₹${result.predicted_price.toFixed(2)}</strong>`;
+        resultDiv.classList.add('fade-in');
     } else {
         resultDiv.innerHTML = `<strong>Error:</strong> ${result.error}`;
     }
